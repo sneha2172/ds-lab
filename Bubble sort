@@ -1,0 +1,22 @@
+#include<stdio.h>
+void main()
+{
+int i,j,a[50],s,temp;
+printf("enter the limit");
+scanf("%d",&s);
+printf("Enter the elements");
+for(i=0;i<s;i++)
+{
+min=i;
+for(j=i+1;j<s;j++)
+{
+if(a[j]<a[min])
+   min=j;
+}
+temp=a[i];
+a[j]=a[min];
+a[min]=temp;
+}
+for(i=0;i<s;i++)
+    printf("%d\t",a[i]);
+}
